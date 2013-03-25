@@ -1,0 +1,10 @@
+Hi,
+
+El producto {product} está casi agotado.
+The stock cover is now less than the specified minimum of {warning_coverage}.
+Current stock cover : {current_coverage}
+
+
+
+
+{shop_url} powered by PrestaShop™
