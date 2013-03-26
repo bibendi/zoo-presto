@@ -117,11 +117,13 @@ setlocale(LC_NUMERIC, 'en_US.UTF-8');
 /* Instantiate cookie */
 
 
-$cookie_lifetime = (int)(defined('_PS_ADMIN_DIR_') ? Configuration::get('PS_COOKIE_LIFETIME_BO') : Configuration::get('PS_COOKIE_LIFETIME_FO'));
-$cookie_lifetime = time() + (max($cookie_lifetime, 1) * 3600);
+//$cookie_lifetime = (int)(defined('_PS_ADMIN_DIR_') ? Configuration::get('PS_COOKIE_LIFETIME_BO') : Configuration::get('PS_COOKIE_LIFETIME_FO'));
+//$cookie_lifetime = time() + (max($cookie_lifetime, 1) * 3600);
+$cookie_lifetime = time() + 3600;
 
-if (defined('_PS_ADMIN_DIR_'))
+if (defined('_PS_ADMIN_DIR_')) {
 	$cookie = new Cookie('psAdmin', '', $cookie_lifetime);
+}
 else
 {
 	if (Context::getContext()->shop->getGroup()->share_order)
@@ -141,6 +143,7 @@ Context::getContext()->cookie = $cookie;
 if (defined('_PS_ADMIN_DIR_'))
 {
 	$employee = new Employee($cookie->id_employee);
+	//echo var_dump($cookie);
 	Context::getContext()->employee = $employee;
 
 	/* Auth on shops are recached after employee assignation */

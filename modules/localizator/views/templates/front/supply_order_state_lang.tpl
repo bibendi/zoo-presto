@@ -1,0 +1,1 @@
+{l s='1 - Creation in progress' mod='localizator'}{l s='2 - Order validated' mod='localizator'}{l s='3 - Pending receipt' mod='localizator'}{l s='4 - Order received in part' mod='localizator'}{l s='5 - Order received completely' mod='localizator'}{l s='6 - Order canceled' mod='localizator'}

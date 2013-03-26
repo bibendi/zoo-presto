@@ -64,7 +64,8 @@ class CookieCore
 	{
 		$this->_content = array();
 		$this->_expire = is_null($expire) ? time() + 1728000 : (int)$expire;
-		$this->_name = md5(_PS_VERSION_.$name);
+		//$this->_name = md5(_PS_VERSION_.$name);
+		$this->_name = $name;
 		$this->_path = trim(Context::getContext()->shop->physical_uri.$path, '/\\').'/';
 		if ($this->_path{0} != '/') $this->_path = '/'.$this->_path;
 		$this->_path = rawurlencode($this->_path);
@@ -74,9 +75,9 @@ class CookieCore
 		$this->_iv = _COOKIE_IV_;
 		$this->_domain = $this->getDomain($shared_urls);
 		$this->_allow_writing = true;
-		if (Configuration::get('PS_CIPHER_ALGORITHM'))
-			$this->_cipherTool = new Rijndael(_RIJNDAEL_KEY_, _RIJNDAEL_IV_);
-		else
+		//if (Configuration::get('PS_CIPHER_ALGORITHM'))
+		//	$this->_cipherTool = new Rijndael(_RIJNDAEL_KEY_, _RIJNDAEL_IV_);
+		//else
 			$this->_cipherTool = new Blowfish($this->_key, $this->_iv);
 		$this->update();
 	}
@@ -225,6 +226,8 @@ class CookieCore
 		$this->_setcookie();
 		unset($_COOKIE[$this->_name]);
 		$this->_modified = true;
+		//if ($_REQUEST['controller'] == 'AdminHome')
+			//die(var_dump(debug_backtrace(false)));
 	}
 
 	/**
@@ -266,11 +269,12 @@ class CookieCore
 		if (isset($_COOKIE[$this->_name]))
 		{
 			/* Decrypt cookie content */
-			$content = $this->_cipherTool->decrypt($_COOKIE[$this->_name]);
+			//$content = $this->_cipherTool->decrypt($_COOKIE[$this->_name]);
+			$content = $_COOKIE[$this->_name];
 			//printf("\$content = %s<br />", $content);
 			
 			/* Get cookie checksum */
-			$checksum = crc32($this->_iv.substr($content, 0, strrpos($content, '¤') + 2));
+			//$checksum = crc32($this->_iv.substr($content, 0, strrpos($content, '¤') + 2));
 			//printf("\$checksum = %s<br />", $checksum);
 			
 			/* Unserialize cookie content */
@@ -282,13 +286,13 @@ class CookieCore
 					$this->_content[$tmpTab2[0]] = $tmpTab2[1];
 			}
 			/* Blowfish fix */
-			if (isset($this->_content['checksum']))
-				$this->_content['checksum'] = (int)($this->_content['checksum']);
+			//if (isset($this->_content['checksum']))
+			//	$this->_content['checksum'] = (int)($this->_content['checksum']);
 			//printf("\$this->_content['checksum'] = %s<br />", $this->_content['checksum']);
 			//die();
 			/* Check if cookie has not been modified */
-			if (!isset($this->_content['checksum']) || $this->_content['checksum'] != $checksum)
-				$this->logout();
+			//if (!isset($this->_content['checksum']) || $this->_content['checksum'] != $checksum)
+			//	$this->logout();
 
 			if (!isset($this->_content['date_add']))
 				$this->_content['date_add'] = date('Y-m-d H:i:s');
@@ -299,7 +303,8 @@ class CookieCore
 		//checks if the language exists, if not choose the default language
 		if (!Language::getLanguage((int)$this->id_lang))
 			$this->id_lang = Configuration::get('PS_LANG_DEFAULT');
-
+		//if ($_REQUEST['controller'] == 'AdminHome')
+			//die(var_dump($_COOKIE));
 	}
 
 	/**
@@ -307,9 +312,12 @@ class CookieCore
 	 */
 	protected function _setcookie($cookie = null)
 	{
+		//echo(var_dump($cookie));
+
 		if ($cookie)
 		{
-			$content = $this->_cipherTool->encrypt($cookie);
+			//$content = $this->_cipherTool->encrypt($cookie);
+			$content = $cookie;
 			$time = $this->_expire;
 		}
 		else
@@ -317,6 +325,12 @@ class CookieCore
 			$content = 0;
 			$time = 1;
 		}
+		// удаляем дубли
+  		/*$headers = headers_list(); header('Set-Cookie:');
+  		foreach($headers as $val) { 
+  			if (strtolower(substr($val, 0, 12)) == 'set-cookie: ' AND !strpos($val, ' '.$this->_name.'=')) header($val, false); 
+  		}*/
+
 		if (PHP_VERSION_ID <= 50200) /* PHP version > 5.2.0 */
 			return setcookie($this->_name, $content, $time, $this->_path, $this->_domain, 0);
 		else
@@ -339,12 +353,12 @@ class CookieCore
 		$cookie = '';
 
 		/* Serialize cookie content */
-		if (isset($this->_content['checksum'])) unset($this->_content['checksum']);
+		//if (isset($this->_content['checksum'])) unset($this->_content['checksum']);
 		foreach ($this->_content as $key => $value)
 			$cookie .= $key.'|'.$value.'¤';
 
 		/* Add checksum to cookie */
-		$cookie .= 'checksum|'.crc32($this->_iv.$cookie);
+		//$cookie .= 'checksum|'.crc32($this->_iv.$cookie);
 		$this->_modified = false;
 		/* Cookies are encrypted for evident security reasons */
 		return $this->_setcookie($cookie);

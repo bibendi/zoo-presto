@@ -69,7 +69,7 @@ class AdminLoginControllerCore extends AdminController
 			}
 		}
 
-		if (file_exists(_PS_ADMIN_DIR_.'/../install') || file_exists(_PS_ADMIN_DIR_.'/../admin'))
+		if (file_exists(_PS_ADMIN_DIR_.'/../install')/* || file_exists(_PS_ADMIN_DIR_.'/../admin')*/	)
 			$this->context->smarty->assign(array(
 				'randomNb' => rand(100, 999),
 				'wrong_folder_name' => true
@@ -162,6 +162,7 @@ class AdminLoginControllerCore extends AdminController
 				$cookie->passwd = $this->context->employee->passwd;
 				$cookie->remote_addr = $this->context->employee->remote_addr;
 				$cookie->write();
+
 
 				// If there is a valid controller name submitted, redirect to it
 				if (isset($_POST['redirect']) && Validate::isControllerName($_POST['redirect']))

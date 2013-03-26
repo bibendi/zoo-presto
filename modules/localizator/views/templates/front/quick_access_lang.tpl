@@ -1,0 +1,1 @@
+{l s='Home' mod='localizator'}{l s='My Shop' mod='localizator'}{l s='New category' mod='localizator'}{l s='New product' mod='localizator'}{l s='New voucher' mod='localizator'}

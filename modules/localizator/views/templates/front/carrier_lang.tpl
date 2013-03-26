@@ -1,0 +1,1 @@
+{l s='Pick up in-store' mod='localizator'}{l s='Delivery next day!' mod='localizator'}

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<partners>
+	<partner>
+		<name><![CDATA[MoneyBookers by Skrill]]></name>
+		<module>moneybookers</module>
+		<checkconfiguration>
+			<key>MB_SECRET_WORD</key>
+		</checkconfiguration>
+		<logo>http://api.prestashop.com/partner/premium/images/moneybookers.png</logo>
+		<labels>
+			<label iso="en"><![CDATA[Accept payments by Skrill]]></label>
+			<label iso="fr"><![CDATA[Acceptez les paiements par Skrill]]></label>
+		</labels>
+		<descriptions>
+		</descriptions>
+	</partner>
+</partners>

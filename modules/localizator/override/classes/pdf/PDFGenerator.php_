@@ -1,0 +1,6 @@
+<?php
+
+class PDFGenerator extends PDFGeneratorCore
+{
+	public $font_by_lang = array('jp' => 'cid0jp', 'fr' => 'dejavusans', 'ru' => 'dejavusans');
+}

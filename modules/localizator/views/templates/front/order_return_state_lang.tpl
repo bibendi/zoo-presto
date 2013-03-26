@@ -1,0 +1,1 @@
+{l s='Waiting for confirmation' mod='localizator'}{l s='Waiting for package' mod='localizator'}{l s='Package received' mod='localizator'}{l s='Return denied' mod='localizator'}{l s='Return completed' mod='localizator'}

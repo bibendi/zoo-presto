@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <module>
+            <name>localizator</name>
+            <displayName><![CDATA[Localizator]]></displayName>
+            <version><![CDATA[2.2]]></version>
+            <description><![CDATA[DataBase translation, import countries and clean database]]></description>
+            <author><![CDATA[PrestaLab.Ru]]></author>
+            <tab><![CDATA[i18n_localization]]></tab>
+            <is_configurable>1</is_configurable>
+            <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+        </module>

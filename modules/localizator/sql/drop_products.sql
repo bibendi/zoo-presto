@@ -1,0 +1,107 @@
+TRUNCATE TABLE `PREFIX_alias`;
+TRUNCATE TABLE `PREFIX_attribute`;
+TRUNCATE TABLE `PREFIX_attribute_group`;
+TRUNCATE TABLE `PREFIX_attribute_group_lang`;
+TRUNCATE TABLE `PREFIX_attribute_impact`;
+TRUNCATE TABLE `PREFIX_attribute_lang`;
+TRUNCATE TABLE `PREFIX_category`;
+TRUNCATE TABLE `PREFIX_category_group`;
+TRUNCATE TABLE `PREFIX_category_lang`;
+TRUNCATE TABLE `PREFIX_category_product`;
+TRUNCATE TABLE `PREFIX_customization`;
+TRUNCATE TABLE `PREFIX_customization_field`;
+TRUNCATE TABLE `PREFIX_customization_field_lang`;
+TRUNCATE TABLE `PREFIX_customized_data`;
+TRUNCATE TABLE `PREFIX_feature`;
+TRUNCATE TABLE `PREFIX_feature_lang`;
+TRUNCATE TABLE `PREFIX_feature_product`;
+TRUNCATE TABLE `PREFIX_feature_value`;
+TRUNCATE TABLE `PREFIX_feature_value_lang`;
+TRUNCATE TABLE `PREFIX_image`;
+TRUNCATE TABLE `PREFIX_image_lang`;
+TRUNCATE TABLE `PREFIX_product`;
+TRUNCATE TABLE `PREFIX_product_attachment`;
+TRUNCATE TABLE `PREFIX_product_attribute`;
+TRUNCATE TABLE `PREFIX_product_attribute_combination`;
+TRUNCATE TABLE `PREFIX_product_attribute_image`;
+TRUNCATE TABLE `PREFIX_product_attribute_shop`;
+TRUNCATE TABLE `PREFIX_product_carrier`;
+TRUNCATE TABLE `PREFIX_product_country_tax`;
+TRUNCATE TABLE `PREFIX_product_download`;
+TRUNCATE TABLE `PREFIX_product_group_reduction_cache`;
+TRUNCATE TABLE `PREFIX_product_lang`;
+TRUNCATE TABLE `PREFIX_product_sale`;
+TRUNCATE TABLE `PREFIX_product_shop`;
+TRUNCATE TABLE `PREFIX_product_supplier`;
+TRUNCATE TABLE `PREFIX_product_tag`;
+TRUNCATE TABLE `PREFIX_scene`;
+TRUNCATE TABLE `PREFIX_scene_category`;
+TRUNCATE TABLE `PREFIX_scene_lang`;
+TRUNCATE TABLE `PREFIX_scene_products`;
+TRUNCATE TABLE `PREFIX_tag`;
+TRUNCATE TABLE `PREFIX_attribute_group_shop`;
+TRUNCATE TABLE `PREFIX_attribute_shop`;
+TRUNCATE TABLE `PREFIX_category_shop`;
+TRUNCATE TABLE `PREFIX_scene_shop`;
+TRUNCATE TABLE `PREFIX_stock_available`;
+TRUNCATE TABLE `PREFIX_image_shop`;
+TRUNCATE TABLE `PREFIX_feature_shop`;
+TRUNCATE TABLE `PREFIX_category_lang`;
+TRUNCATE TABLE `PREFIX_product`;
+TRUNCATE TABLE `PREFIX_product_shop`;
+TRUNCATE TABLE `PREFIX_feature_product`;
+TRUNCATE TABLE `PREFIX_product_lang`;
+TRUNCATE TABLE `PREFIX_category_product`;
+TRUNCATE TABLE `PREFIX_product_tag`;
+TRUNCATE TABLE `PREFIX_image`;
+TRUNCATE TABLE `PREFIX_image_lang`;
+TRUNCATE TABLE `PREFIX_image_shop`;
+TRUNCATE TABLE `PREFIX_specific_price`;
+TRUNCATE TABLE `PREFIX_specific_price_priority`;
+TRUNCATE TABLE `PREFIX_product_carrier`;
+TRUNCATE TABLE `PREFIX_cart_product`;
+TRUNCATE TABLE `PREFIX_compare_product`;
+TRUNCATE TABLE `PREFIX_favorite_product`;
+TRUNCATE TABLE `PREFIX_product_attachment`;
+TRUNCATE TABLE `PREFIX_product_country_tax`;
+TRUNCATE TABLE `PREFIX_product_download`;
+TRUNCATE TABLE `PREFIX_product_group_reduction_cache`;
+TRUNCATE TABLE `PREFIX_product_sale`;
+TRUNCATE TABLE `PREFIX_product_supplier`;
+TRUNCATE TABLE `PREFIX_scene_products`;
+TRUNCATE TABLE `PREFIX_warehouse_product_location`;
+TRUNCATE TABLE `PREFIX_stock`;
+TRUNCATE TABLE `PREFIX_stock_available`;
+TRUNCATE TABLE `PREFIX_stock_mvt`;
+TRUNCATE TABLE `PREFIX_customization`;
+TRUNCATE TABLE `PREFIX_customization_field`;
+TRUNCATE TABLE `PREFIX_supply_order_detail`;
+TRUNCATE TABLE `PREFIX_attribute_impact`;
+TRUNCATE TABLE `PREFIX_product_attribute`;
+TRUNCATE TABLE `PREFIX_product_attribute_shop`;
+TRUNCATE TABLE `PREFIX_product_attribute_combination`;
+TRUNCATE TABLE `PREFIX_product_attribute_image`;
+TRUNCATE TABLE `PREFIX_attribute`;
+TRUNCATE TABLE `PREFIX_attribute_impact`;
+TRUNCATE TABLE `PREFIX_attribute_lang`;
+TRUNCATE TABLE `PREFIX_attribute_group`;
+TRUNCATE TABLE `PREFIX_attribute_group_lang`;
+TRUNCATE TABLE `PREFIX_attribute_group_shop`;
+TRUNCATE TABLE `PREFIX_attribute_shop`;
+TRUNCATE TABLE `PREFIX_product_attribute`;
+TRUNCATE TABLE `PREFIX_product_attribute_shop`;
+TRUNCATE TABLE `PREFIX_product_attribute_combination`;
+TRUNCATE TABLE `PREFIX_product_attribute_image`;
+DELETE FROM `PREFIX_stock_available` WHERE id_product_attribute=0;
+INSERT INTO `PREFIX_category` (`id_category`, `id_parent`, `id_shop_default`, `level_depth`, `nleft`, `nright`, `active`, `date_add`, `date_upd`, `position`, `is_root_category`) VALUES
+(1, 0, 1, 0, 1, 10, 1, NOW(), NOW(), 0, 0),
+(2, 1, 1, 1, 2, 9, 1, NOW(), NOW(), 0, 1);
+INSERT INTO `PREFIX_category_group` (`id_category`, `id_group`) VALUES
+(1, 0),
+(2, 0),
+(2, 1),
+(2, 2),
+(2, 3);
+INSERT INTO `ps_category_shop` (`id_category`, `id_shop`, `position`) VALUES
+(1, 1, 1),
+(2, 1, 1);

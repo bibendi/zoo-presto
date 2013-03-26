@@ -1,0 +1,1 @@
+{l s='Webmaster' mod='localizator'}{l s='If a technical problem occurs on this website' mod='localizator'}{l s='Customer service' mod='localizator'}{l s='For any question about a product, an order' mod='localizator'}
