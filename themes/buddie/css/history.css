@@ -1,0 +1,25 @@
+#block-history{color:#503501}
+.color-myaccount{color:#503501}
+
+#block-history table#order-list thead th{color:#fff;text-align:left;padding:0 10px}
+#block-history table#order-list tbody tr td{background-color:#FFF;padding:10px}
+#block-history table#order-list td.history_link{text-align:left;white-space:nowrap}
+#block-history #block-order-detail{padding-top:10px}
+#block-history table.detail_step_by_step th{text-align:left!important}
+#block-history #block-order-detail th{padding:0 10px;text-align:left}
+#block-history #block-order-detail p{padding-left:0;padding-right:0}
+#order-detail-content{clear:both;margin-top:1.5em}
+#order-detail-content tbody tr{height:3em}
+#order-detail-content tbody tr td,#block-history table tbody tr td{text-align:left;padding:10px;}
+#order-detail-content table td input.order_qte_input{display:none}
+#order-detail-content table td span.order_qte_span{background:none;display:block;width:100%}
+#block-history #block-order-detail h4{padding-bottom:5px}
+#block-history #block-order-detail #sendOrderMessage p{padding:0 4px 0 0 !important}
+#block-history #block-order-detail #sendOrderMessage p.submit input{line-height:29px!important}
+#block-history #block-order-detail textarea{margin:0 auto;padding:10px;width:96%}
+#ordermsg textarea{margin:0;padding:0;width:528px}
+#block-history table#order-list,#order-detail-content tfoot td,#order-detail-content table td.order_cb input{border:none}
+#order-detail-content tfoot td span{margin-left:15px}
+#block-history  #block-order-detail form.submit h4  input.button.exclusive{margin-bottom:10px}
+#block-history  #sendOrderMessage p label{text-align:left;}
+#history  #block-history  .submit input.button.exclusive{#line-height:23px}

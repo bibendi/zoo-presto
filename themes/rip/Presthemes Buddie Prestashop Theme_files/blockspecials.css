@@ -1,0 +1,22 @@
+.blockspecials ul li {
+    margin:  10px 0 0;
+    text-align: left;position:relative;
+}
+.blockspecials ul li span.reduction{position:absolute;top:40%;left:20px;width:60px;height:48px;text-align:center;color:#fff;font-size:22px;text-shadow:0 1px 0 #7a7a7a;padding:18px 3px 0;font-weight:700}
+.blockspecials ul li  .category_name{padding-bottom:0}
+.blockspecials ul li a.product_image {
+    display: block;overflow:hidden;
+    margin: 0 0 5px;text-align:center;
+}
+.blockspecials ul li  .product_desc{display:block;clear:both;font-size:11px;margin-bottom:5px;}
+.blockspecials ul li a.product_image img{float:none}
+.blockspecials ul li h5,.blockspecials ul li .specials_price {    
+    margin-top: 5px;display:block
+}
+.blockspecials ul li .special_price{margin-top:3px;width:auto;float:left}
+.blockspecials ul li span.price-discount , .blockspecials ul li span.price{line-height:22px;float:left;font-size:14px;font-weight:700}
+.blockspecials ul li a.ajax_add_to_cart_button, .blockspecials ul li span.exclusive{float:right;padding-left:14px;height:31px;width:auto}
+.blockspecials ul li a.ajax_add_to_cart_button span, .blockspecials ul li span.exclusive span{float:left;line-height:28px;padding:0 14px 0 0;height:31px;color:#fff;font-size:12px;}
+.blockspecials ul li h5{ padding: 0 0 10px;margin:0}
+.blockspecials ul li h5 a{    color: #503501;font-weight:700;
+    font-size: 14px;}

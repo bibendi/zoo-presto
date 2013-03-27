@@ -1,0 +1,44 @@
+.comparison_feature_value{margin-top:5px;padding:5px}
+.comparison_feature{color:red;font-weight:700;padding:5px}
+.product_coparison_header{background:url(../../img/bkg_more_info_block.png) no-repeat center top;height:57px}
+.comparison_header{padding-top:10px}
+.comparison_infos{padding-bottom:20px;position:relative;text-transform:none;vertical-align:top}
+.comparison_infos.first{width:152px!important;}
+.comparison_infos div.item{overflow:hidden;position:relative;width:152px;margin-left:40px;}
+.comparison_infos div.item.first_item{margin-left:0!important}
+.comparison_infos div.item h5{margin:10px 0 3px!important;padding:0}
+.comparison_infos div.item h5 a{color:#547d16!important;font-size:14px!important}
+.comparison_infos a.product_image{text-align:center;height:auto;}
+#product_comparison{border-collapse:collapse;width:100%}
+tr.comparison_header td{font-size:22px;font-weight:400;padding:40px 3px 10px 0;text-transform:uppercase;border:1px solid #d3ccbf;border-left:none;border-right:none;  font-family: 'BebasNeueRegular';}
+.product_desc a{font-size:11px;text-decoration:none}
+.product_desc{margin:0px 0 5px!important}
+.comparison_comment{background-color:#FFF}
+.cluetip-comparison_comments{background-color:#F1F2F4;border:1px solid gray;opacity:0.95;padding:10px;text-align:justify;width:430px}
+.comment .customer_name{font-weight:700}
+.cmp_remove{color:#503501;cursor:pointer;display:block;float:left;font-size:12px;font-weight:400;margin:0;padding-left:15px;text-align:left;text-transform:none;clear:left}
+.comparison_availability_statut{display:none;height:27px}
+.comparison_old_price{height:13px}
+.comparison_product_infos{float:left;position:relative;width:200px;margin:0 0 0 30px;}
+.comparison_product_infos .price,.comparison_product_infos .price-discount{font-size:14px!important;font-weight:700!important}
+.comparison_product_infos .price_container .price{}
+.comparison_product_infos .price-discount{color:#969696;float:left;margin-right:10px;text-decoration:line-through;width:auto;font-size:12px;font-weight:700}
+.comparison_product_infos a.product_image{text-align:center;width:100%}
+.comparison_product_infos .product_desc{height:auto!important; margin:10px 0 15px!important;padding:0!important}
+.comparison_product_infos h3{padding:3px 0;width:100%;float:left}
+.comparison_product_infos h3 a{font-weight:700;text-transform:none;font-size:14px;text-transform:none;color:#503501}
+.comparison_product_infos .product_desc{color:#6f6555;padding:0}
+.comparison_product_infos span.availability{width:100%;font-size:12px;text-transform:uppercase}
+.comparison_product_infos span.outofstock{width:100%;color:#A2A2A2;font-size:10px;text-transform:uppercase}
+.comparison_product_infos .price_container{text-align:left;width:auto;margin:0!important}
+.comparison_product_infos .product_discount{float:left;margin:7px;text-align:left;width:auto;display:none}
+.comparison_product_infos .product_discount span{color:#d26b0f;float:left;font-size:10px;font-weight:700}
+.comparison_unit_price{color:gray;font-size:.75em}
+.product_discount{color:#d5750b;font-weight:700;height:13px;text-transform:uppercase}
+.line-compare{border:1px solid #e5e5e5;margin-top:10px;padding:2px;width:100%}
+.line-compare p{background:url(../../img/bkg_line_compare.jpg) repeat-x;height:5px;margin:0!important;width:200px}
+.comparison_feature_odd,.comparison_feature_even{padding:10px 0 10px 30px;color:#503501;text-align:left}
+.comparison_feature_odd.first,.comparison_feature_odd.first_fead,.comparison_feature_even.first,.comparison_feature_even.first_fead {padding-left:0!important}
+.comparison_feature_odd.first,.comparison_feature_even.first{color:#503501;font-size:12px;font-weight:400}
+tr.last_item .comparison_feature_odd,tr.last_item .comparison_feature_even{border:none}
+.comparison_feature_odd.featurename,.comparison_feature_even.featurename{color:#887d18;font-weight:700}

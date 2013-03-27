@@ -1,0 +1,1 @@
+Dir['../../default/css/*.css'].each{|f| `wget 'http://demo.presthemes.com/buddie/themes/buddie/css/#{File.basename(f)}'` }

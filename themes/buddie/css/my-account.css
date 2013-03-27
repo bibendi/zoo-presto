@@ -1,0 +1,9 @@
+#my-account #center_column ul{float:left;margin:10px 0;border-bottom:1px solid #d3ccbf;padding-bottom:15px;width:100%}
+#my-account #center_column li{border:1px solid #d3ccbf;float:left;height:40px;line-height:40px;margin-bottom:15px;text-align:left;text-transform:none;width:300px;margin-right:30px;}
+#my-account #center_column li a.my_img{float:left;line-height:40px;width:40px;border-right:1px solid #d3ccbf;text-align:center;margin-right:10px;height:40px;}
+#my-account #center_column li a.my_img img{text-align:center;margin:0}
+#my-account #center_column li a{color:#503501;font-size:12px;font-weight:700;}
+#my-account #center_column li a img{margin-right:10px}
+#my-account #center_column li a img.icon{vertical-align:middle;}
+#my-account p a{color:#503501;font-size:12px;font-weight:700;text-transform:none}
+#my-account p a img.icon{vertical-align:top}

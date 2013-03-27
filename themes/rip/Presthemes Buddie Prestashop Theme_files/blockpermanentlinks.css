@@ -1,0 +1,8 @@
+ul#header_links{position:absolute;top:40px;left:30px;z-index:1000}
+#header_links li#header_link_home{margin-left:0}
+#header_links li{float:left;width:auto;background:url('../../../img/line.png') no-repeat center right;padding-right:10px;margin-right:10px;}
+#header_links li a{color:#fff;  text-transform: capitalize;}
+#header_links li#header_link_contact{background:none;padding:0;}
+#header_links li a:hover{color:#faeea3}
+#header_links li a.active {color:#faeea3}
+#header_links a{color:#fff;display:block;text-align:center;text-decoration:none}

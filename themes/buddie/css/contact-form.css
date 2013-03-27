@@ -1,0 +1,34 @@
+	#contact  fieldset {
+		padding:0 0 15px 0;
+	}
+
+	#contact form.contact{padding:0 20px;}
+	#contact #center_column p.bold{padding:0 0 10px}
+	#contact  #center_column h3 {
+			margin:0 0 15px 0;
+			padding:8px 0;
+			font-size:14px;
+			color:#000;
+			text-transform:uppercase;
+		}
+		#contact #center_column p {margin:0; padding:0 0 10px;}
+		#contact #center_column p.desc_contact { text-align: center; padding-left: 10px; padding-right: 10px; }
+		
+		#contact p.text label,
+		#contact p.select label,
+		#contact p.select span,
+		#contact p.textarea label {line-height:22px;text-align:left}
+		#contact p.textarea label {vertical-align:top}
+		#contact p.text input,
+		#contact p.select input {
+			background:none;border:1px solid #d9d9d9;width:243px
+		}
+		#contact p.select select {
+			background:none;border:1px solid #d9d9d9;width:265px!important
+		}
+		#contact p.textarea textarea {
+			height:100px!important;width:243px!important
+		}
+		#contact p.submit input {margin-left:0!important;}
+		#fileUpload{line-height:20px}
+#contact   form.std p.submit{padding-left:0!important}

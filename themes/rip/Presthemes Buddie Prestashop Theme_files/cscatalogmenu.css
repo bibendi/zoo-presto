@@ -1,0 +1,56 @@
+/* Block categories */
+#categories_block_left .tree { }
+#categories_block_left .tree li {
+	border: none;
+	padding-top: 5px;padding-left:0;
+	background: none;
+	margin-left: 0;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 15px
+}
+#categories_block_left .tree li.last { padding-bottom: 0 }
+#categories_block_left .tree ul { padding: 2px 0 0 }
+#categories_block_left .tree li li {
+	padding: 5px 0 0;
+	background: none;
+	font-size: 11px;
+	font-weight: normal;background: url('../../themes/buddie/img/bkg_man_li.png') no-repeat left 10px;
+}
+#categories_block_left .tree li li a{font-weight:400;text-transform:none;padding-left:15px;}
+#categories_block_left .tree li li a.selected{}
+#categories_block_left .tree li li.last { padding-bottom: 0 }
+#categories_block_left .tree li li li {
+	padding-left: 15px;
+	font-size: 9px
+}
+#categories_block_left .tree a {
+	padding-left: 0;text-transform:capitalize;
+	color: #503501;font-size:12px;font-weight:400;
+}
+#categories_block_left .tree a:hover { text-decoration: none }
+#categories_block_left ul.tree a.selected {}
+#categories_block_left span.grower {
+	display: block;
+	float: right;
+	background-position: 0 3px;
+	background-repeat: no-repeat;
+	width: 9px;
+	height: 10px;
+	margin: 0 10px 0 0!important;
+	padding: 0
+}
+#categories_block_left span.OPEN { background-image: url('../../themes/buddie/img/icon/sort_asc.gif') }
+#categories_block_left span.CLOSE { background-image: url('../../themes/buddie/img/icon/sort_desc.gif') }
+
+div.blockcategories_footer h4{ background:url('../../themes/buddie/img/block_footer_page.gif') repeat-x scroll left top;text-align:center;}
+div.blockcategories_footer { background:url('../../themes/buddie/img/block_footer_page_footer.png') repeat-x scroll left bottom #bdc2c9;padding-bottom:5px}
+div.blockcategories_footer h4 a{color:#ffffff;font-weight:normal;text-decoration:none}
+div.blockcategories_footer .category_footer{ background-image:url('../../themes/buddie/img/block_bg.jpg');}
+div.category_footer{ background:none;text-align:center;border:none; }
+
+#footer div.category_footer h4 a{color: #666666;}
+#footer div.category_footer .list{float:left;}
+#footer div.category_footer .list  ul.tree li{background:none;border-left:none;}
+
+#footer .footer_logo{float: left;width: 188px;}
